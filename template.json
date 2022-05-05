@@ -1,0 +1,302 @@
+{
+  "Actor": {
+    "types": [
+      "ranger",
+      "civilian",
+      "monster",
+      "villain",
+      "base",
+      "zord",
+      "megazord"
+    ],
+    "templates": {
+      "base": {
+        "name": "",
+        "health": {
+          "current": 0,
+          "total": 0,
+          "damage": 0
+        },
+        "movement": {
+          "ground": 0,
+          "swim": 0,
+          "aerial": 0
+        },
+        "size": "",
+        "languages": "",
+        "description": ""
+      },
+      "ranger": {
+        "pronouns": [],
+        "influences": [],
+        "hangups": [],
+        "level": 0,
+        "origin": "",
+        "role": "",
+        "personal_power": 0,
+        "strength": {
+          "value": 0,
+          "toughness": 0,
+          "athletics": {
+            "value": 0,
+            "specializations": []
+          },
+          "brawn": {
+            "value": 0,
+            "specializations": []
+          },
+          "conditioning": 0,
+          "initimidation": {
+            "value": 0,
+            "specializations": []
+          },
+          "might": {
+            "value": 0,
+            "specializations": []
+          }
+        },
+        "speed": {
+          "value": 0,
+          "evasion": 0,
+          "acrobatics": {
+            "value": 0,
+            "specializations": []
+          },
+          "driving": {
+            "value": 0,
+            "specializations": []
+          },
+          "finesse": {
+            "value": 0,
+            "specializations": []
+          },
+          "infiltration": {
+            "value": 0,
+            "specializations": []
+          },
+          "initiative": "",
+          "targeting": {
+            "value": 0,
+            "specializations": []
+          }
+        },
+        "smarts": {
+          "value": 0,
+          "willpower": 0,
+          "alertness": {
+            "value": 0,
+            "specializations": []
+          },
+          "culture": {
+            "value": 0,
+            "specializations": []
+          },
+          "science": {
+            "value": 0,
+            "specializations": []
+          },
+          "survival": {
+            "value": 0,
+            "specializations": []
+          },
+          "technology": {
+            "value": 0,
+            "specializations": []
+          }
+        },
+        "social": {
+          "value": 0,
+          "cleverness": 0,
+          "animal_handling": {
+            "value": 0,
+            "specializations": []
+          },
+          "deception": {
+            "value": 0,
+            "specializations": []
+          },
+          "performance": {
+            "value": 0,
+            "specializations": []
+          },
+          "persuasion": {
+            "value": 0,
+            "specializations": []
+          },
+          "streetwise": {
+            "value": 0,
+            "specializations": []
+          }
+        },
+        "powers": [],
+        "perks": [],
+        "background_bonds": [],
+        "inventory": [],
+        "notes": "",
+        "zord": ""
+      },
+      "civilian": {
+        "skills": [],
+        "influences": [],
+        "hangups": []
+      },
+      "monster": {
+        "grown": false,
+        "threat_level": 0,
+        "toughness": 0,
+        "evasion": 0,
+        "willpower": 0,
+        "cleverness": 0,
+        "skills": [],
+        "attacks": [],
+        "powers": [],
+        "perks": [],
+        "hangups": [],
+        "zord": ""
+      },
+      "zord": {
+        "name": "",
+        "ranger": "",
+        "color_spectrum": "",
+        "megaform_traits": "",
+        "strength": {
+          "value": 0,
+          "toughness": 0,
+          "brawn": 0,
+          "conditioning": 0,
+          "might": 0
+        },
+        "speed": {
+          "value": 0,
+          "evasion": 0,
+          "driving": 0,
+          "initiative": 0
+        },
+        "skill_notes": "",
+        "attacks": [],
+        "size": "",
+        "movement": {
+          "ground": 0,
+          "swim": 0,
+          "aerial": 0
+        },
+        "health": {
+          "current": 0,
+          "total": 0,
+          "damage": 0
+        },
+        "features": ""
+      },
+      "megazord": {
+        "initiative": [],
+        "zords": []
+      }
+    },
+    "ranger": {
+      "templates": ["base", "ranger"]
+    },
+    "civilian": {
+      "templates": ["base"]
+    },
+    "villain": {
+      "templates": ["base", "monster"]
+    },
+    "monster": {
+      "templates": ["base", "monster"]
+    },
+    "zord": {
+      "templates": ["zord"]
+    },
+    "megazord": {
+      "templates": ["zord", "megazord"]
+    }
+  },
+  "Items": {
+    "types": ["weapon", "armor", "combined_weapon","gear","vehicles"],
+	"templates": {
+		"weapon_base": {
+			"name": "",
+			"description": "",
+			"damage_roll": "",
+			"availability": "",
+			"type": "",
+			"classification": "",
+			"requirements": [],
+			"hands": 0,
+			"effects": [],
+			"alternate_effects": [],
+			"skill": "",
+			"size": "",
+			"style": "",
+			"range": "",
+			"traits": [],
+			"upgrades": [],
+			"ammunition": {
+				"name": "",
+				"current": 0,
+				"max": 0
+			}
+		},
+		"combined_weapon": {
+			"weapons": []
+		},
+		"armor": {
+			"name": "",
+			"availability": "",
+			"type": "",
+			"classification": "",
+			"requirements": [],
+			"description": "",
+			"effect": "",
+			"traits": []
+		},
+		"gear": {
+			"name": "",
+			"kit": false,
+			"description": "",
+			"roll": ""
+		},
+		"vehicle": {
+			"name": "",
+			"description": "",
+			"movement": {
+				"ground": 0,
+				"aerial": 0,
+				"swim": 0
+			},
+			"toughness": 0,
+			"evasion": 0,
+			"willpower": 0,
+			"cleverness": 0,
+			"defenses": [],
+			"crew": {
+				"required": 0,
+				"drivers": [],
+				"passengers": []
+			},
+			"hardpoint_weaopns": [],
+			"firepoints": 0,
+			"attacks": [],
+			"skills": [],
+			"perks": [],
+			"powers": [],
+			"traits": []
+		}
+	},
+	"weapon": {
+		"types": ["weapon_base"]
+	},
+	"armor": {
+		"types": ["armor"]
+	},
+	"combined_weapon": {
+		"types": ["weapon_base","combined_weapon"]
+	},
+	"gear": {
+		"types": ["gear"]
+	},
+	"vehicle": {
+		"types": ["vehicle"]
+	}
+  }
+}

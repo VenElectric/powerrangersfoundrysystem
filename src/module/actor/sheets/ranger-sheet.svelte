@@ -12,11 +12,21 @@
 </script>
 
 <div class="standard-information">
-  <div class="cage">
+  <div class="cage-justify">
     <Profile actorImage={actor.img} actorName={actor.name} />
-	<button>Ranger Stats</button>
+	  <button>Ranger Stats</button>
+    <!-- <div class="flex-group-center">
+      <label class="resource-label" for="description"
+        >{localize(loc.description)}</label
+      > 
+      <textarea
+        id="description"
+        name="data.description"
+        value={data.description}
+      />
+    </div> -->
   </div>
-
+ <!-- description should probably be a popup????-->
   <div class="flex-row">
     <div class="flex-group-center">
       <label class="resource-label" for="level"
@@ -26,11 +36,9 @@
         type="text"
         id="level"
         name="data.level"
-        bind:value={data.level}
+        value={data.level}
       />
     </div>
-  </div>
-  <div class="flex-row">
     <div class="flex-group-center">
       <label class="resource-label" for="pronouns"
         >{localize(loc.pronouns)}</label
@@ -39,11 +47,9 @@
         type="text"
         id="pronouns"
         name="data.pronouns"
-        bind:value={data.pronouns}
+        value={data.pronouns}
       />
     </div>
-  </div>
-  <div class="flex-row">
     <div class="flex-group-center">
       <label class="resource-label" for="origin"
         >{localize(loc.origin)}</label
@@ -52,11 +58,9 @@
         type="text"
         id="origin"
         name="data.origin"
-        bind:value={data.origin}
+        value={data.origin}
       />
     </div>
-  </div>
-  <div class="flex-row">
     <div class="flex-group-center">
       <label class="resource-label" for="role"
         >{localize(loc.role)}</label
@@ -65,11 +69,9 @@
         type="text"
         id="role"
         name="data.role"
-        bind:value={data.role}
+        value={data.role}
       />
     </div>
-  </div>
-  <div class="flex-row">
     <div class="flex-group-center">
       <label class="resource-label" for="languages"
         >{localize(loc.languages)}</label
@@ -84,21 +86,7 @@
   </div>
 </div>
 
-<div class="flex-row">
-    <div class="flex-group-center">
-      <label class="resource-label" for="description"
-        >{localize(loc.description)}</label
-      >
-      <input
-        type="text"
-        id="description"
-        name="data.description"
-        bind:value={data.description}
-      />
-    </div>
-  </div>
-
-<div>
+<div class="trackers-cage">
 	<div>Personal Power</div>
 	<Health healthData={data.health}></Health>
 </div>
@@ -113,11 +101,43 @@
   :global(.character > .window-content) {
     background: #fff;
   }
-
+  :global(.cage) {
+    display: flex;
+    flex-direction: column;
+  }
+  :global(.cage-grid-2){
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 1em;
+  }
   label {
     color: #ff3e00;
     font-size: 1.2rem;
     text-transform: uppercase;
     font-weight: 100;
   }
+  .flex-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 1em;
+  }
+  .standard-information {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 1em;
+  }
+  .trackers-cage {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 1em;
+    margin-top: 2em;
+  }
+  /*.roll-button {
+    background-color: #F72119;
+    box-shadow: 2px 2px 3px #f72119, -2px -2px 3px red, -1px 3px 5px red, 1px -3px 4px red;
+    border: 0.4em red solid;
+  }
+  .roll-button:hover {
+    box-shadow: 2px 2px 3px rgb(116, 10, 10), -2px -2px 3px rgb(116, 10, 10), -1px 3px 5px rgb(116, 10, 10), 1px -3px 4px rgb(116, 10, 10);
+  } */
 </style>

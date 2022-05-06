@@ -10,7 +10,7 @@ export const rangerLoc = {
   pronouns: `${systemName}.pronouns`,
   influences: `${systemName}.influences`,
   hangups: `${systemName}.hangups`,
-  level: `${systemName}.leve`,
+  level: `${systemName}.level`,
   origin: `${systemName}.origin`,
   role: `${systemName}.role`,
   personal_power: `${systemName}.personal_power`,

@@ -4,13 +4,13 @@
 
   const filePicker = new FilePicker({
     type: "image",
-    activeSource:"public",
+    activeSource: "public",
     callback: (path: string) => {
-    actorImage = path},
+      actorImage = path;
+    },
     field: document.getElementsByTagName("img")[0],
-    button: document.getElementsByTagName("img")[0]
+    button: document.getElementsByTagName("img")[0],
   });
-
 </script>
 
 <header class="sheet-header">
@@ -30,4 +30,5 @@
 </header>
 
 <style>
+  
 </style>

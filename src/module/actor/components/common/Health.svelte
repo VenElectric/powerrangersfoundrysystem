@@ -13,32 +13,54 @@
 </script>
 
 <div class="health-flex">
-  <span>Health</span>
+  <h2>Health</h2>
   <input
     type="number"
-    id="strength"
     name="data.health.current"
     value={healthData.current}
     style="display:none;width:1%;"
   />
-  <label for="total">Total Health</label>
-  <input id="total" name="data.health.total" value={healthData.total} />
-  <ul>
-    {#each Array(healthData.total) as i, index}
-      {#if healthData.damage >= index + 1}
-        <li class="health-fill" on:click={() => updateHealth(index + 1)}>x</li>
-      {:else}
-        <li class="health-fill" on:click={() => updateHealth(index + 1)} />
-      {/if}
-    {/each}
-  </ul>
+  <input
+    type="number"
+    name="data.health.damage"
+    value={healthData.damage}
+    style="display:none;width:1%;"
+  />
+  <div class="cage-grid-2">
+    <div class="health-label">
+      <label for="total">Total Health</label>
+      <input
+        id="total"
+        name="data.health.total"
+        value={healthData.total}
+        style:width="10vw"
+        on:change={() => (healthData.total = this.value)}
+      />
+    </div>
+    <ul>
+      {#each Array(10) as i, index}
+        {#if healthData.damage >= index + 1}
+          <li class="health-fill" on:click={() => updateHealth(index + 1)}>
+            x
+          </li>
+        {:else}
+          <li class="health-fill" on:click={() => updateHealth(index + 1)} />
+        {/if}
+      {/each}
+    </ul>
+  </div>
 </div>
 
 <style>
   ul {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    /* display: flex;
+    flex-wrap: wrap; */
     list-style-type: none;
     margin-top: 0;
+    margin-left: 0;
+    padding-left: 0;
   }
   li {
     border: solid black;
@@ -56,5 +78,15 @@
     flex-direction: column;
     justify-content: center;
     margin: 0.2em;
+  }
+  .health-cage {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+  }
+  .health-label {
+    margin: 1em;
+    margin-left: 0
   }
 </style>
